@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>call</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style>
+	body{
+		text-align: center;
+	}
+	#screen{
+		width: 396px;
+		height: 600px;
+		border: 1px solid gray;
+		margin: 0 auto;
+		background-image: url("img/bg.jpg");
+		background-repeat: no-repeat;
+	}
+	#head{
+		border: 1px solid gray;
+		height: 20px;
+		background-color: #4f5b66;
+		opacity: 0.9;
+	}
+	#caller{
+		border: 1px solid gray;
+		height: 100px;
+	}
+	#main{
+		border: 1px solid gray;
+		height: 380px;
+	}
+	#control{
+		border: 1px solid gray;
+		height: 100px;
+	}
+	#name{
+		height: 50px;
+		background-color: #a7adba;
+		opacity: 0.9;
+
+	}
+	#type{
+		height: 50px;
+		background-color: #65737e;
+		opacity: 0.8;
+	}
+	span.name{
+		color: white;
+		font-size: 35px;
+		opacity: 1.0;
+	}
+	div.type{
+		color: white;
+		font-size: 18px;
+		padding-top: 12px;
+		opacity: 1.0;
+	}
+	#control{
+		background-color: #a7adba;
+		opacity: 0.8;
+	}
+	button{
+		margin: 30px;
+
+	}
+	.btn{
+		box-shadow: 3px 3px black;
+		border: 1px solid black;
+		padding-left:20px;
+		padding-right:20px;
+	}
+</style>
+</head>
+
+<body>
+	<audio controls preload = "auto" loop autoplay>
+		<source src = "sound/ring.mp3">
+	</audio>
+	<div id = "screen">
+		<div id = "head">
+			<img src="img/bar2.png" width = "395" height = "20" alt="">
+		</div>
+		<div id = "caller">
+			<div id = "name">
+				<span class = "name">Monster</span>
+			</div>
+			<div id = "type">
+				<div class = "type">mobile</div>
+			</div>
+		</div>
+		<div id = "main">
+			
+		</div>
+		<div id = "control">
+			<button type = "button" class = "btn btn-success">answer</button>
+
+			<button type = "button" class = "btn btn-danger">decline</button>
+		</div>
+
+	</div>
+</body>
+</html>
