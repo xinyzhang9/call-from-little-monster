@@ -29,7 +29,6 @@
 		height: 100px;
 	}
 	#main{
-		border: 1px solid gray;
 		height: 380px;
 	}
 	#control{
@@ -72,7 +71,46 @@
 		padding-left:20px;
 		padding-right:20px;
 	}
+	span.white{
+		color: white;
+	}
+
 </style>
+<script>
+	$(document).ready(function(){
+		$("#video").hide();
+		$("#control2").hide();
+		var videoplay = 0;
+		$(answer).click(function(){
+			var a = document.getElementsByTagName("audio")[0];
+			a.pause();
+			$("#screen").css('backgroundImage','url(img/black.jpg)');
+			$("#name").css('background-color','black');
+			$("#type").css('background-color','black');
+			$("#control").hide();
+			videoplay = 1;
+			if(videoplay == 1){
+				$("#control2").show();
+				$("#video").show();
+				var v = document.getElementsByTagName("video")[0];
+				v.play();
+			}
+		})
+
+		$("#endcall").click(function(){
+			$("#caller").hide();
+			$("#control2").hide();
+
+			$("#video").hide();
+			var v = document.getElementsByTagName("video")[0];
+			v.pause();
+			videoplay = 0;
+			if(videoplay == 0){
+				$("#screen").css('backgroundImage','url(img/bg2.png)');
+			}
+		})
+	})
+</script>
 </head>
 
 <body>
@@ -81,7 +119,7 @@
 	</audio>
 	<div id = "screen">
 		<div id = "head">
-			<img src="img/bar2.png" width = "395" height = "20" alt="">
+			<img src="img/bar3.png" width = "394" height = "20" alt="">
 		</div>
 		<div id = "caller">
 			<div id = "name">
@@ -92,13 +130,20 @@
 			</div>
 		</div>
 		<div id = "main">
-			
+			<video width = "393" id = "video" loop>
+			  <source src="video/intro.mp4" type="video/mp4">
+			  Your browser does not support the <code>video</code> element.
+			</video>
 		</div>
 		<div id = "control">
-			<button type = "button" class = "btn btn-success">answer</button>
+			<button id = "answer" type = "button" class = "btn btn-success">answer</button>
 
-			<button type = "button" class = "btn btn-danger">decline</button>
+			<button id = "decline" type = "button" class = "btn btn-danger">decline</button>
 		</div>
+		<div id = "control2">
+			<button id = "endcall" type = "button" class = "btn btn-danger">End Call</button>
+		</div>
+
 
 	</div>
 </body>
