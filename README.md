@@ -1,5 +1,6 @@
 # call-from-little-monster
-I did this mock-call application to demonstrate some features of audio and video in HTML5 and how to control them using JavaScript.
+I did this mock-call application to demonstrate some features of audio and video in HTML5 and how to control them using JavaScript.   
+It is also a good practice on CSS3.  
 One day, you receive a call from your favorite girl: little monster...
 # how to play
 The lovely girl "little monster" is calling you...  
