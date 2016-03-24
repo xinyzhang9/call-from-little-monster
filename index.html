@@ -113,6 +113,16 @@
 				$("#screen").css('backgroundImage','url(img/bg2.png)');
 			}
 		})
+
+		$("#decline").click(function(){
+			var v = document.getElementsByTagName("audio")[0];
+			v.pause();
+			$("#caller").hide();
+			$("#control").hide();
+			$("#control2").hide();
+			$("#screen").css('backgroundImage','url(img/bg2.png)');
+
+		})
 	})
 </script>
 </head>
